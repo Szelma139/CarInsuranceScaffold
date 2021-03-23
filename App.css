@@ -1,0 +1,55 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+body {
+background: beige;
+
+}
+
+.app {
+  display: flex;
+  height: 95vh;
+  margin:2.5vh 2.5vw;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  overflow: hidden
+}
+
+.primary {
+background-color: rgb(34,31,31);
+}
+
+
+
+
+ h1,h2,h3,h4,h5 {
+  color: black;
+  font-weight: 900;
+  font-size: 3rem;
+
+}
+
+p {
+  font-family: 'Yusei Magic', sans-serif;
+
+}
+
+
+
+a {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.through {
+  display: flex;
+  margin-left: 5rem;
+  padding: 3rem;
+  
+}

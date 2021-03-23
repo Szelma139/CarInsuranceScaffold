@@ -1,0 +1,32 @@
+
+
+.main-pane {
+    padding: 35px;;
+    display: flex;
+    flex:6;
+    background-color: #fff;
+    flex-direction: column;
+}
+
+
+
+.main-pane-nav{
+    display: flex;
+    flex:1;
+}
+
+
+.main-pane-form{
+    display: flex;
+    flex:3;
+}
+
+
+.main-pane-bottom{
+    display: flex;
+    flex:3;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+

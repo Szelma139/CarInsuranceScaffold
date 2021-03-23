@@ -1,0 +1,12 @@
+
+
+.right-pane {
+ 
+    display: flex;
+    flex:2;
+    width: 90%;
+    padding:30px;
+
+
+
+}
