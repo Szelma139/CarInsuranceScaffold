@@ -5,20 +5,8 @@
 }
 
 
-.frost-card {
-    background: linear-gradient(180deg, rgb(255, 230, 186, 0.3), rgba(255, 237, 222, 0.6));
-    position: relative;
-    backdrop-filter: blur(16px);
-    box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.4), inset 0px 0px 35px rgba(0, 0, 0, 0.08);
-    transform: rotate(12deg);
-}
 
-
-.glass-card {
+.card {
     background: rgba( 255, 255, 255, 0.25 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 4px );
--webkit-backdrop-filter: blur( 4px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
