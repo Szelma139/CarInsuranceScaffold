@@ -11,20 +11,15 @@
 
 
 .main-pane-nav{
-    display: flex;
-    flex:1;
+   height: 120px;
 }
 
 
-.main-pane-form{
-    display: flex;
-    flex:3;
-}
 
 
 .main-pane-bottom{
     display: flex;
-    flex:3;
+    flex:1;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;

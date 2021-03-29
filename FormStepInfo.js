@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import { StepInfo } from "./StepInfo";
+import { StepInfo } from "./StepsWidget/StepInfo";
 
-export const FormStepInfo = () => {
+export const FormStepInfo = ({stepState=[false, false, false]}) => {
+  const first = stepState[0]
+  const second = stepState[1]
+  const third = stepState[2]
   return (
     <div
       style={{
@@ -12,8 +15,8 @@ export const FormStepInfo = () => {
         marginLeft:"auto"
       }}
     >
-      <StepInfo />
-      <div style={{ alignSelf: "center" }}>
+      <StepInfo finished={first}/>
+      <div style={{ alignSelf: "center",transform:"translateY(22px)" }}>
         <svg height="50" width="100">
           <line
             x1="0"
@@ -25,8 +28,8 @@ export const FormStepInfo = () => {
           />
         </svg>
       </div>
-      <StepInfo StepInfo number="2" text="Accident" />
-      <div style={{ alignSelf: "center",marginLeft:"5px",marginRight:"10px" }}>
+      <StepInfo  number="2" text="Accident" finished={second} />
+      <div style={{ alignSelf: "center",marginLeft:"5px",marginRight:"10px", transform:"translateY(22px)" }}>
         <svg height="50" width="100">
           <line
             x1="0"
@@ -38,8 +41,8 @@ export const FormStepInfo = () => {
           />
         </svg>
       </div>
-      <StepInfo number="3" text="Review" />
-      <div></div>
+      <StepInfo number="3" text="Review" finished={third}  />
+
     </div>
   );
 };

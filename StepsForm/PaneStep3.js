@@ -3,10 +3,11 @@ import { TransitionComponent } from "../TransitionComponent";
 
 import './StepTheme.css';
 
-export const PaneStep3 = ({ curStep, setCurStep }) => {
+export const PaneStep3 = ({ curStep, setCurStep,setThirdStep }) => {
   if (curStep !== 3) return null;
   const handleClick = (e) => {
     e.preventDefault();
+    setThirdStep(true)
     setCurStep(4);
   };
   return (

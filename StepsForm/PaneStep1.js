@@ -11,7 +11,7 @@ export const PaneStep1 = ({
   setFinished,
   curStep,
   setCurStep,
-  setFirstStep
+  setFirstStep,
 }) => {
   if (curStep !== 1) return null;
   const handleClick = (e) => {
@@ -108,17 +108,24 @@ export const PaneStep1 = ({
               <h2 style={{ margin: "1rem 0" }}>
                 Car insurance from gold time is:
               </h2>
-              <div style={{ display: "flex", flexDirection: "column", alignItems:"flex-start",justifyContent:"space-around" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  justifyContent: "space-around",
+                }}
+              >
                 <div
                   style={{
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
-                    marginTop:"3rem"
+                    marginTop: "3rem",
                   }}
                 >
                   <CheckMark />
-                  <span style={{ marginLeft: "1rem",fontWeight:"700" }}>
+                  <span style={{ marginLeft: "1rem", fontWeight: "700" }}>
                     Get full coverage of your costs in the event of a car
                     accident.
                   </span>
@@ -129,11 +136,11 @@ export const PaneStep1 = ({
                       display: "flex",
                       flexDirection: "row",
                       alignItems: "center",
-                      marginTop:"3rem"
+                      marginTop: "3rem",
                     }}
                   >
                     <CheckMark />
-                    <span style={{ marginLeft: "1rem",fontWeight:"700" }}>
+                    <span style={{ marginLeft: "1rem", fontWeight: "700" }}>
                       With the "All-inclusive" program, you do not need to apply
                       for payment to another insurance company.
                     </span>
@@ -145,11 +152,11 @@ export const PaneStep1 = ({
                       display: "flex",
                       flexDirection: "row",
                       alignItems: "center",
-                      marginTop:"3rem"
+                      marginTop: "3rem",
                     }}
                   >
                     <CheckMark />
-                    <span style={{ marginLeft: "1rem",fontWeight:"700" }}>
+                    <span style={{ marginLeft: "1rem", fontWeight: "700" }}>
                       Receiving insurance payment in the shortest possible time
                       without visiting the office.
                     </span>

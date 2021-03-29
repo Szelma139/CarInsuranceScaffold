@@ -1,13 +1,52 @@
-import React from "react";
-import { CheckMark } from "./CheckMark";
+import React, { useState } from "react";
 import { BurdgerMenu } from "./BurdgerMenu";
-import { Card } from "./Card";
 import { FormStepInfo } from "./FormStepInfo";
 import { Logo } from "./Logo";
+import { MainForm } from "./MainForm";
 
 import "./MainPane.css";
 
 export const MainPane = () => {
+  const [carData, setCarData] = useState({
+    brand: "",
+    model: "",
+  });
+
+  const [accidentData, setAccidentData] = useState({
+    vehicleName: "",
+    registrationName: "",
+    manufacturingYear: false,
+  });
+
+  const [insuranceProgram, setInsuranceProgram] = useState({
+    inclusiveOffer: "$1500",
+    franchise: "$0",
+    extendProtection: false,
+    extendProtectionValue: "$0",
+  });
+
+  const [curStep, setCurStep] = useState(1);
+
+  const [stepState, setStepState] = useState([false, false, false]);
+
+  const setFirstStep = (val) => {
+    let newArray = [...stepState];
+    newArray.splice(0, 0, true);
+    setStepState(newArray);
+  };
+
+  const setSecondStep = (val) => {
+    let newArray = [...stepState];
+    newArray.splice(1, 1, true);
+    setStepState(newArray);
+  };
+
+  const setThirdStep = (val) => {
+    let newArray = [...stepState];
+    newArray.splice(2, 2, true);
+    setStepState(newArray);
+  };
+
   return (
     <div className="main-pane">
       <div
@@ -21,35 +60,24 @@ export const MainPane = () => {
       >
         <Logo />
 
-        <FormStepInfo />
+        <FormStepInfo stepState={stepState} />
 
         <BurdgerMenu />
       </div>
-      <div className="main-pane-form">
-        <CheckMark />
-        <CheckMark />
-        <CheckMark />
-      </div>
-      <div className="main-pane-bottom">
-        <h1 style={{ display: "inline-block", width: "100%" }}>
-          Safety is what matters{" "}
-        </h1>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-around",
-            height: "350px",
-            gap: "55px",
-          }}
-        >
-          <Card bigText="5m" smallText="Payments every day" />
-          <Card bigText="11yr" smallText="Leader in the insurance market" />
-          <Card bigText="98%" smallText="Satisfied clients working with us" />
-          <Card bigText="2m" smallText="Agreements concluded in 2020" />
-        </div>
-      </div>
+
+      <MainForm
+        curStep={curStep}
+        setCurStep={setCurStep}
+        accidentData={accidentData}
+        setAccidentData={setAccidentData}
+        carData={carData}
+        setCarData={setCarData}
+        insuranceProgram={insuranceProgram}
+        setInsuranceProgram={setInsuranceProgram}
+        setFirstStep={setFirstStep}
+        setSecondStep={setSecondStep}
+        setThirdStep={setThirdStep}
+      />
     </div>
   );
 };

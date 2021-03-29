@@ -25,6 +25,7 @@ export const PaneStep2 = ({
   ],
   carName = "BMW, X6",
   carType = "Medium-sized crossover",
+  setSecondStep
 }) => {
 
   const [carPath,setCarPath] = useState("/images/car1.png")
@@ -33,6 +34,7 @@ export const PaneStep2 = ({
 
   const handleClick = (e) => {
     e.preventDefault();
+    setSecondStep(true)
     setCurStep(3);
   };
 

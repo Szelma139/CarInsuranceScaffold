@@ -1,4 +1,5 @@
 import React from "react";
+import { TransitionComponent } from "../TransitionComponent";
 
 export const StepInfo = ({
   text = "InsuranceText",
@@ -7,6 +8,9 @@ export const StepInfo = ({
 }) => {
   if (finished)
     return (
+      <TransitionComponent>
+
+
       <div style={{
         display: "flex",
         flexDirection: "column",
@@ -28,9 +32,12 @@ export const StepInfo = ({
           justifyContent: "center"}}>&#10003;</div>
           {finished.toString()}
       </div>
-    );
+      </TransitionComponent>
+    )
+    else
  
   return (
+    <TransitionComponent>
     <div
       style={{
         display: "flex",
@@ -57,5 +64,6 @@ export const StepInfo = ({
       </div>
       {finished.toString()}
     </div>
+    </TransitionComponent>
   );
 };
