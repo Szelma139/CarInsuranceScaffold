@@ -1,0 +1,13 @@
+
+
+select {
+    opacity:.4;
+background: rgba(0,0,0,0.1);
+border: none;
+height: 55px;
+width: 100%;
+text-align:left;
+text-align-last:left;
+border-radius: 5px;
+margin: 1rem 0;
+}
