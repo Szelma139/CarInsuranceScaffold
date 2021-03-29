@@ -1,4 +1,4 @@
 # CarInsuranceScaffold
 
 </br>
-<img src="https://imgur.com/ltgQLJT"/>
+<img src="https://i.imgur.com/ltgQLJT.png"/>
